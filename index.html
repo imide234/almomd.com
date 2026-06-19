@@ -7,8 +7,6 @@
   <meta name="keywords" content="customer retention company Nigeria, CRM systems small business, lifecycle marketing, WhatsApp marketing funnel, repeat purchase system, Almond Growth, Imide Victor, stop losing customers, CRM Nigeria, retention marketing Africa" />
   <meta name="author" content="Almond Growth" />
   <meta name="robots" content="index, follow" />
-
-  <!-- Open Graph -->
   <meta property="og:title" content="Almond Growth — We Help Small Businesses Stop Losing Customers" />
   <meta property="og:description" content="CRM & customer retention growth company. We build systems that turn one-time buyers into loyal, repeat customers." />
   <meta property="og:type" content="website" />
@@ -16,28 +14,216 @@
   <meta property="og:image" content="https://www.almondgrowth.com/assets/almondgrowth-preview.jpg" />
   <meta property="og:locale" content="en_US" />
   <meta property="og:site_name" content="Almond Growth" />
-
-  <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Almond Growth — We Help Small Businesses Stop Losing Customers" />
   <meta name="twitter:description" content="CRM & customer retention growth company helping businesses build systems that keep customers coming back." />
   <meta name="twitter:image" content="https://www.almondgrowth.com/assets/almondgrowth-preview.jpg" />
-
   <title>Almond Growth — CRM & Customer Retention Growth Company</title>
-
-  <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet" />
-
   <link rel="stylesheet" href="style.css" />
+  <style>
+    /* ── VIDEO TESTIMONIAL SECTION ── */
+    .video-testi-section {
+      background: var(--navy);
+      padding: 100px 0;
+      border-top: 1px solid rgba(255,255,255,0.07);
+      border-bottom: 1px solid rgba(255,255,255,0.07);
+    }
+    .video-testi-inner {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 60px;
+      align-items: center;
+    }
+    .video-wrap {
+      position: relative;
+      border-radius: 16px;
+      overflow: hidden;
+      border: 1px solid rgba(93,184,46,0.25);
+      box-shadow: 0 0 60px rgba(93,184,46,0.10), 0 20px 60px rgba(13,27,46,0.4);
+      background: #000;
+      aspect-ratio: 16/9;
+    }
+    .video-wrap video {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+    .video-live-badge {
+      position: absolute;
+      top: 14px;
+      left: 14px;
+      background: rgba(13,27,46,0.92);
+      backdrop-filter: blur(8px);
+      border: 1px solid rgba(93,184,46,0.45);
+      color: var(--green-bright);
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.10em;
+      text-transform: uppercase;
+      padding: 5px 12px;
+      border-radius: 40px;
+    }
+    .video-testi-content .section__label { margin-bottom: 14px; }
+    .video-testi-content h2 {
+      font-family: var(--font-display);
+      font-size: clamp(26px, 3.5vw, 40px);
+      font-weight: 700;
+      color: var(--white);
+      line-height: 1.2;
+      margin-bottom: 18px;
+    }
+    .video-testi-content h2 em {
+      font-style: italic;
+      background: linear-gradient(135deg, var(--green-mid), var(--green-bright));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    .video-stars {
+      color: var(--gold-light);
+      font-size: 20px;
+      letter-spacing: 3px;
+      margin-bottom: 16px;
+    }
+    .video-quote {
+      font-family: var(--font-display);
+      font-size: 18px;
+      font-style: italic;
+      color: rgba(255,255,255,0.88);
+      line-height: 1.65;
+      border-left: 3px solid var(--green-bright);
+      padding-left: 20px;
+      margin-bottom: 24px;
+    }
+    .video-testi-content p {
+      font-size: 15px;
+      color: rgba(255,255,255,0.6);
+      line-height: 1.75;
+      margin-bottom: 28px;
+    }
+    .video-author {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+    .video-author-avatar {
+      width: 52px;
+      height: 52px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--gold), var(--gold-light));
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 700;
+      color: var(--navy);
+      font-size: 14px;
+      flex-shrink: 0;
+      border: 2px solid rgba(200,160,32,0.4);
+    }
+    .video-author-text strong {
+      display: block;
+      font-size: 15px;
+      color: var(--white);
+      font-weight: 700;
+    }
+    .video-author-text span {
+      font-size: 13px;
+      color: rgba(255,255,255,0.45);
+    }
+    .video-result-badge {
+      display: inline-block;
+      margin-top: 10px;
+      background: rgba(200,160,32,0.12);
+      border: 1px solid rgba(200,160,32,0.35);
+      color: var(--gold-light);
+      font-size: 12px;
+      font-weight: 700;
+      padding: 5px 14px;
+      border-radius: 20px;
+    }
+
+    /* ── INVESTOR BANNER ON HOME PAGE ── */
+    .investor-banner-section {
+      padding: 0 24px 72px;
+      background: var(--white);
+    }
+    .investor-banner {
+      max-width: 1160px;
+      margin: 0 auto;
+      background: linear-gradient(135deg, var(--navy) 0%, #0a2010 100%);
+      border: 1px solid rgba(200,160,32,0.22);
+      border-radius: 20px;
+      padding: 40px 44px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 28px;
+      flex-wrap: wrap;
+      position: relative;
+      overflow: hidden;
+    }
+    .investor-banner::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 2px;
+      background: linear-gradient(90deg, var(--green), var(--gold), var(--green));
+    }
+    .investor-banner h3 {
+      font-family: var(--font-display);
+      font-size: 22px;
+      font-weight: 700;
+      color: var(--white);
+      margin-bottom: 6px;
+    }
+    .investor-banner p {
+      font-size: 15px;
+      color: rgba(255,255,255,0.65);
+      max-width: 520px;
+    }
+    .btn--gold {
+      background: linear-gradient(135deg, var(--gold), var(--gold-light));
+      color: var(--navy);
+      padding: 13px 26px;
+      border-radius: 8px;
+      font-weight: 700;
+      font-size: 15px;
+      text-decoration: none;
+      white-space: nowrap;
+      display: inline-block;
+      transition: var(--transition);
+    }
+    .btn--gold:hover { opacity: 0.88; transform: translateY(-2px); }
+
+    /* ── NAV INVESTOR LINK ── */
+    .nav__invest {
+      color: var(--gold-light) !important;
+      border: 1px solid rgba(200,160,32,0.3) !important;
+      border-radius: 6px !important;
+      padding: 5px 12px !important;
+      font-size: 13px !important;
+    }
+    .nav__invest:hover {
+      background: rgba(200,160,32,0.08) !important;
+    }
+
+    @media (max-width: 768px) {
+      .video-testi-inner { grid-template-columns: 1fr; gap: 36px; }
+      .investor-banner { flex-direction: column; text-align: center; }
+      .investor-banner p { max-width: 100%; }
+    }
+  </style>
 </head>
 <body>
 
   <!-- NAV -->
   <header class="nav" id="nav">
     <div class="nav__inner container">
-      <a href="#" class="nav__logo">
+      <a href="index.html" class="nav__logo">
         <span class="logo-mark">A</span>
         <span class="logo-text">Almond<strong>Growth</strong></span>
       </a>
@@ -49,6 +235,7 @@
         <a href="#testimonials">Results</a>
         <a href="#story">Our Story</a>
         <a href="blog.html" style="color:#5DB82E;font-weight:600;">Blog</a>
+        <a href="investors.html" class="nav__invest">🌱 Investors</a>
         <a href="#signup" class="nav__cta">Book Free Audit →</a>
       </nav>
       <button class="nav__burger" aria-label="Toggle menu" id="burger">
@@ -63,6 +250,7 @@
       <a href="#testimonials">Results</a>
       <a href="#story">Our Story</a>
       <a href="blog.html" style="color:#5DB82E;font-weight:600;">Blog</a>
+      <a href="investors.html" style="color:#E8BE3A;font-weight:600;">🌱 Investors & Partners</a>
       <a href="#signup" class="nav__cta-mobile">Book Free Audit →</a>
     </div>
   </header>
@@ -84,7 +272,6 @@
         <a href="#signup" class="btn btn--primary">Book a Free Retention Audit</a>
         <a href="#solution" class="btn btn--ghost">See How It Works ↓</a>
       </div>
-
       <div class="hero__stats fade-in delay-4">
         <div class="stat-card">
           <span class="stat-card__num" data-target="73">0</span><span class="stat-card__unit">%</span>
@@ -153,72 +340,42 @@
           <div class="service-card__icon">🗂️</div>
           <h3>CRM System Setup & Management</h3>
           <p>We design and implement Customer Relationship Management systems tailored to your business. Track every customer, every purchase, every interaction — so no one falls through the cracks.</p>
-          <ul>
-            <li>Customer database & segmentation</li>
-            <li>Purchase history tracking</li>
-            <li>Automated follow-up pipelines</li>
-            <li>Re-engagement triggers</li>
-          </ul>
+          <ul><li>Customer database & segmentation</li><li>Purchase history tracking</li><li>Automated follow-up pipelines</li><li>Re-engagement triggers</li></ul>
         </div>
         <div class="service-card reveal">
           <div class="service-card__num">02</div>
           <div class="service-card__icon">💬</div>
           <h3>WhatsApp Marketing & Automation</h3>
           <p>WhatsApp is where your Nigerian customers live. We build personalised WhatsApp funnels that nurture leads, recover lost customers, and drive repeat purchases automatically.</p>
-          <ul>
-            <li>Broadcast campaigns</li>
-            <li>Post-purchase follow-up sequences</li>
-            <li>Win-back campaigns for dormant customers</li>
-            <li>Loyalty & reward messaging</li>
-          </ul>
+          <ul><li>Broadcast campaigns</li><li>Post-purchase follow-up sequences</li><li>Win-back campaigns for dormant customers</li><li>Loyalty & reward messaging</li></ul>
         </div>
         <div class="service-card reveal">
           <div class="service-card__num">03</div>
           <div class="service-card__icon">🔄</div>
           <h3>Lifecycle Marketing Systems</h3>
           <p>Every customer has a journey. We map, optimise, and automate that journey so your business is always present at the right moment — welcome, re-engage, reward, retain.</p>
-          <ul>
-            <li>Onboarding sequences</li>
-            <li>Upsell & cross-sell flows</li>
-            <li>Milestone & loyalty campaigns</li>
-            <li>Churn prevention messaging</li>
-          </ul>
+          <ul><li>Onboarding sequences</li><li>Upsell & cross-sell flows</li><li>Milestone & loyalty campaigns</li><li>Churn prevention messaging</li></ul>
         </div>
         <div class="service-card reveal">
           <div class="service-card__num">04</div>
           <div class="service-card__icon">🛒</div>
           <h3>Repeat Purchase Systems</h3>
           <p>We engineer systems specifically designed to bring customers back for a second, third, and fourth purchase — turning single transactions into long-term relationships.</p>
-          <ul>
-            <li>Replenishment reminders</li>
-            <li>Exclusive returning-customer offers</li>
-            <li>Purchase frequency optimisation</li>
-            <li>Loyalty programme design</li>
-          </ul>
+          <ul><li>Replenishment reminders</li><li>Exclusive returning-customer offers</li><li>Purchase frequency optimisation</li><li>Loyalty programme design</li></ul>
         </div>
         <div class="service-card reveal">
           <div class="service-card__num">05</div>
           <div class="service-card__icon">🗺️</div>
           <h3>Customer Journey Optimisation</h3>
           <p>We audit your entire customer experience — from first touch to post-purchase — and identify exactly where customers are dropping off so we can fix the leaks.</p>
-          <ul>
-            <li>Customer journey mapping</li>
-            <li>Touchpoint gap analysis</li>
-            <li>Friction removal</li>
-            <li>Experience improvement plan</li>
-          </ul>
+          <ul><li>Customer journey mapping</li><li>Touchpoint gap analysis</li><li>Friction removal</li><li>Experience improvement plan</li></ul>
         </div>
         <div class="service-card reveal">
           <div class="service-card__num">06</div>
           <div class="service-card__icon">📊</div>
           <h3>Retention Analytics & Growth Tracking</h3>
           <p>We track what matters: repeat purchase rate, customer lifetime value, churn rate, and retention ROI — so you always know your system is working.</p>
-          <ul>
-            <li>Retention KPI dashboard</li>
-            <li>Monthly growth reporting</li>
-            <li>Customer lifetime value tracking</li>
-            <li>Campaign performance analysis</li>
-          </ul>
+          <ul><li>Retention KPI dashboard</li><li>Monthly growth reporting</li><li>Customer lifetime value tracking</li><li>Campaign performance analysis</li></ul>
         </div>
       </div>
     </div>
@@ -314,7 +471,9 @@
     </div>
   </section>
 
-  <!-- TESTIMONIALS -->
+  <!-- ══════════════════════════════════════════
+       TESTIMONIALS — written cards
+  ══════════════════════════════════════════ -->
   <section class="section section--dark" id="testimonials">
     <div class="container">
       <div class="section__header section__header--light">
@@ -322,21 +481,14 @@
         <h2>What Happens When You Stop Losing Customers</h2>
       </div>
       <div class="testimonials-grid">
-
-        <!-- Monday Phone World testimonial -->
         <div class="testimonial-card testimonial-card--featured reveal">
           <div class="testimonial-card__stars">★★★★★</div>
           <blockquote>
             "When a business fails to meet its goals, it often becomes frustrating. Morale weakens because the business lacks the strength to expand — a challenge many business owners face in today's economy. I want to sincerely thank Almond Growth for their prompt intervention in tackling these problems. They provide structure, help both small and large enterprises reach their target customers, and boost productivity through sales, rebranding, and strategic marketing. Beyond that, they help businesses build long-term relationships with customers by responding to their needs promptly and effectively. Almond Growth is simply the best, and I highly recommend their services."
           </blockquote>
           <div class="testimonial-card__author">
-            <img
-              src="https://imide234.github.io/almondgrowth.com/monday-phone-world.jpg"
-              alt="Monday Phone World — Verified Almond Growth Client"
-              class="testimonial-card__photo"
-              loading="lazy"
-              onerror="this.style.display='none';document.getElementById('mpwAvatar').style.display='flex';"
-            />
+            <img src="monday-phone-world.jpg" alt="Monday Phone World" class="testimonial-card__photo" loading="lazy"
+              onerror="this.style.display='none';document.getElementById('mpwAvatar').style.display='flex';" />
             <div class="testimonial-card__avatar" id="mpwAvatar" style="display:none;">MW</div>
             <div>
               <strong>Monday Phone World</strong>
@@ -345,35 +497,67 @@
           </div>
           <div class="testimonial-card__result">⭐ Verified Client</div>
         </div>
-
         <div class="testimonial-card reveal">
           <div class="testimonial-card__stars">★★★★★</div>
-          <blockquote>
-            "Our repeat customer rate grew by 73% in 3 months using Almond Growth systems. We used to chase new customers every week. Now our existing customers keep coming back — and they bring friends."
-          </blockquote>
+          <blockquote>"Our repeat customer rate grew by 73% in 3 months using Almond Growth systems. We used to chase new customers every week. Now our existing customers keep coming back — and they bring friends."</blockquote>
           <div class="testimonial-card__author">
             <div class="testimonial-card__avatar">FB</div>
-            <div>
-              <strong>Fashion Brand Owner</strong>
-              <span>Lagos, Nigeria</span>
-            </div>
+            <div><strong>Fashion Brand Owner</strong><span>Lagos, Nigeria</span></div>
           </div>
           <div class="testimonial-card__result">↑ 73% repeat customer rate in 90 days</div>
         </div>
-
         <div class="testimonial-card reveal">
           <div class="testimonial-card__stars">★★★★★</div>
-          <blockquote>
-            "We stopped wasting money on ads that never converted. Almond Growth showed us that the customers we already had were our biggest growth asset. Now they keep coming back — automatically."
-          </blockquote>
+          <blockquote>"We stopped wasting money on ads that never converted. Almond Growth showed us that the customers we already had were our biggest growth asset. Now they keep coming back — automatically."</blockquote>
           <div class="testimonial-card__author">
             <div class="testimonial-card__avatar">TP</div>
-            <div>
-              <strong>Telecom Partner</strong>
-              <span>Nigeria</span>
-            </div>
+            <div><strong>Telecom Partner</strong><span>Nigeria</span></div>
           </div>
           <div class="testimonial-card__result">↓ 40% reduction in customer churn</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════
+       VIDEO TESTIMONIAL — Monday Phone World
+       (NEW SECTION — builds trust & momentum)
+  ══════════════════════════════════════════ -->
+  <section class="video-testi-section" id="video-testimonial">
+    <div class="container">
+      <div class="video-testi-inner">
+
+        <!-- LEFT: Video player -->
+        <div class="video-wrap reveal">
+          <video controls preload="metadata" poster="">
+            <source src="WhatsApp_Video_2026-06-15_at_22_24_30.mp4" type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
+          <div class="video-live-badge">⭐ Real Client · Verified</div>
+        </div>
+
+        <!-- RIGHT: Context & attribution -->
+        <div class="video-testi-content reveal">
+          <span class="section__label section__label--light">Video Testimonial</span>
+          <h2>Hear It Directly From<br/>A Client Who Has <em>Lived It.</em></h2>
+          <div class="video-stars">★★★★★</div>
+          <p class="video-quote">
+            "Almond Growth gave our business the structure we never knew we needed — and the customers we thought were gone started coming back."
+          </p>
+          <p>
+            Monday Phone World, a retail electronics business in Nigeria, shares exactly what changed after working with Almond Growth — from frustrated, unpredictable revenue to structured systems that create real, loyal customer relationships.
+          </p>
+          <p style="font-size:14px; color:rgba(255,255,255,0.45); margin-bottom:16px;">
+            This is what happens when a business stops chasing new customers and starts building the right systems to keep the ones it already has.
+          </p>
+          <div class="video-author">
+            <div class="video-author-avatar">MW</div>
+            <div class="video-author-text">
+              <strong>Monday Phone World</strong>
+              <span>Retail Electronics Business, Nigeria</span>
+              <div class="video-result-badge">⭐ Verified Almond Growth Client</div>
+            </div>
+          </div>
         </div>
 
       </div>
@@ -399,7 +583,7 @@
         <div class="story-team reveal">
           <div class="team-card">
             <div class="team-card__img-wrap">
-              <img src="https://imide234.github.io/almondgrowth.com/CEO.jpeg" alt="Imide Victor, Founder and CEO of Almond Growth" loading="lazy" />
+              <img src="CEO.jpeg" alt="Imide Victor, Founder and CEO of Almond Growth" loading="lazy" />
             </div>
             <div class="team-card__info">
               <strong>Imide Victor</strong>
@@ -409,7 +593,7 @@
           </div>
           <div class="team-card">
             <div class="team-card__img-wrap">
-              <img src="https://imide234.github.io/almondgrowth.com/partnersss.jpeg" alt="Nwanji Chukwuemeka David, Collaborator at Almond Growth" loading="lazy" />
+              <img src="partner.png" alt="Nwanji Chukwuemeka David, Collaborator at Almond Growth" loading="lazy" />
             </div>
             <div class="team-card__info">
               <strong>Nwanji Chukwuemeka David</strong>
@@ -422,7 +606,18 @@
     </div>
   </section>
 
-  <!-- CTA / SIGNUP -->
+  <!-- INVESTOR BANNER -->
+  <div class="investor-banner-section">
+    <div class="investor-banner reveal">
+      <div>
+        <h3>🌱 Investors & Partners — We're Growing</h3>
+        <p>Interested in partnering with Almond Growth or investing in Africa's leading CRM retention company? See our vision, traction, roadmap, and how to get involved.</p>
+      </div>
+      <a href="investors.html" class="btn--gold">View Investor Page →</a>
+    </div>
+  </div>
+
+  <!-- SIGNUP -->
   <section class="section section--cta" id="signup">
     <div class="container">
       <div class="cta-block reveal">
@@ -435,19 +630,9 @@
           <li>✓ WhatsApp Marketing Growth Plan</li>
           <li>✓ No obligation. No pressure.</li>
         </ul>
-        <!-- ✅ FORMSPREE FORM — replace YOUR_FORM_ID with your actual Formspree form ID -->
-        <form
-          class="cta-form"
-          id="auditForm"
-          action="https://formspree.io/f/mnjrzglk"
-          method="POST"
-          novalidate
-        >
-          <!-- Formspree: send reply to the customer's email -->
+        <form class="cta-form" id="auditForm" action="https://formspree.io/f/mnjrzglk" method="POST" novalidate>
           <input type="hidden" name="_replyto" id="replytoField" value="" />
-          <!-- Formspree: custom subject line in your inbox -->
           <input type="hidden" name="_subject" value="🌰 New Free Retention Audit Request — Almond Growth" />
-
           <div class="cta-form__row">
             <input type="text" name="Full Name" id="fname" placeholder="Your Full Name" required autocomplete="name" />
             <input type="text" name="Business Name" id="fbiz" placeholder="Business Name" required />
@@ -467,7 +652,6 @@
           <button type="submit" class="btn btn--primary btn--full" id="submitBtn">Book My Free Retention Audit →</button>
           <p class="cta-form__note">We respect your privacy. No spam — ever.</p>
         </form>
-
         <div class="cta-success" id="ctaSuccess" hidden>
           <div class="cta-success__inner">
             <div class="cta-success__icon">🎉</div>
@@ -475,7 +659,6 @@
             <p>We've received your request. A member of the Almond Growth team will be in touch within 24 hours with your free Retention Audit plan.</p>
           </div>
         </div>
-
         <div class="cta-error" id="ctaError" hidden>
           <div class="cta-success__inner">
             <div class="cta-success__icon">⚠️</div>
@@ -491,7 +674,7 @@
   <footer class="footer">
     <div class="container footer__inner">
       <div class="footer__brand">
-        <a href="#" class="nav__logo">
+        <a href="index.html" class="nav__logo">
           <span class="logo-mark">A</span>
           <span class="logo-text">Almond<strong>Growth</strong></span>
         </a>
@@ -518,7 +701,9 @@
           <a href="#solution">Retention Analytics</a>
         </div>
         <div class="footer__col">
-          <h4>Legal</h4>
+          <h4>Company</h4>
+          <a href="blog.html">Blog</a>
+          <a href="investors.html" style="color:var(--gold-light);font-weight:600;">🌱 Investors & Partners</a>
           <a href="sitemap.html">Sitemap</a>
           <a href="privacy.html">Privacy Policy</a>
           <a href="terms.html">Terms of Service</a>
