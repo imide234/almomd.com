@@ -10,74 +10,34 @@
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
   <style>
-    .sitemap-hero {
-      background: var(--almond-pale);
-      padding: 140px 0 80px;
-    }
-    .sitemap-hero h1 {
-      font-family: var(--font-display);
-      font-size: clamp(32px, 4vw, 52px);
-      color: var(--brown-mid);
-      margin-bottom: 12px;
-    }
-    .sitemap-hero p {
-      color: var(--text-muted);
-      font-size: 17px;
-    }
-    .sitemap-body { padding: 80px 0; }
-    .sitemap-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-      gap: 32px;
-    }
-    .sitemap-group {
-      background: var(--almond-pale);
-      border: 1px solid var(--border);
-      border-radius: var(--radius-lg);
-      padding: 28px 32px;
-    }
+    .sitemap-hero { background: var(--navy); padding: 140px 0 80px; color: var(--white); }
+    .sitemap-hero h1 { font-family: var(--font-display); font-size: clamp(32px, 4vw, 52px); color: var(--white); margin-bottom: 12px; }
+    .sitemap-hero p { color: rgba(255,255,255,0.65); font-size: 17px; }
+    .sitemap-body { padding: 80px 0; background: var(--navy-muted); }
+    .sitemap-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 32px; }
+    .sitemap-group { background: var(--white); border: 1px solid var(--border); border-radius: var(--radius-lg); padding: 28px 32px; transition: var(--transition); }
+    .sitemap-group:hover { box-shadow: var(--shadow); border-color: rgba(61,138,40,0.2); }
     .sitemap-group h2 {
-      font-family: var(--font-display);
-      font-size: 18px;
-      font-weight: 700;
-      color: var(--brown-mid);
-      margin-bottom: 6px;
-      display: flex;
-      align-items: center;
-      gap: 8px;
+      font-family: var(--font-display); font-size: 18px; font-weight: 700; color: var(--navy);
+      margin-bottom: 6px; display: flex; align-items: center; gap: 8px;
     }
-    .sitemap-group p {
-      font-size: 13px;
-      color: var(--text-light);
-      margin-bottom: 20px;
-    }
+    .sitemap-group p { font-size: 13px; color: var(--text-light); margin-bottom: 20px; }
     .sitemap-group ul { padding: 0; }
-    .sitemap-group ul li {
-      border-bottom: 1px solid var(--border);
-    }
+    .sitemap-group ul li { border-bottom: 1px solid var(--border); }
     .sitemap-group ul li:last-child { border-bottom: none; }
     .sitemap-group ul li a {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 10px 0;
-      font-size: 15px;
-      color: var(--text-muted);
-      transition: var(--transition);
+      display: flex; justify-content: space-between; align-items: center;
+      padding: 10px 0; font-size: 15px; color: var(--text-muted); transition: var(--transition);
     }
-    .sitemap-group ul li a:hover { color: var(--almond); }
-    .sitemap-group ul li a .arrow { color: var(--almond); opacity: 0; transition: var(--transition); }
+    .sitemap-group ul li a:hover { color: var(--green); }
+    .sitemap-group ul li a .arrow { color: var(--green-bright); opacity: 0; transition: var(--transition); }
     .sitemap-group ul li a:hover .arrow { opacity: 1; }
-    .sitemap-update {
-      text-align: center;
-      margin-top: 60px;
-      padding: 24px;
-      background: var(--almond-pale);
-      border-radius: var(--radius);
-      border: 1px solid var(--border);
-      color: var(--text-muted);
-      font-size: 14px;
-    }
+    .sitemap-group--gold { border-color: rgba(200,160,32,0.3); background: var(--gold-pale); }
+    .sitemap-group--gold h2 { color: var(--gold); }
+    .sitemap-group--gold ul li a:hover { color: var(--gold); }
+    .sitemap-group--gold ul li a .arrow { color: var(--gold); }
+    .sitemap-update { text-align: center; margin-top: 60px; padding: 24px; background: var(--white); border-radius: var(--radius); border: 1px solid var(--border); color: var(--text-muted); font-size: 14px; }
+    .sitemap-update a { color: var(--green); font-weight: 600; }
   </style>
 </head>
 <body>
@@ -96,6 +56,8 @@
         <a href="index.html#industries">Who We Serve</a>
         <a href="index.html#testimonials">Results</a>
         <a href="index.html#story">Our Story</a>
+        <a href="blog.html" style="color:#5DB82E;font-weight:600;">Blog</a>
+        <a href="investors.html" style="color:#E8BE3A;font-weight:600;border:1px solid rgba(200,160,32,0.3);padding:5px 12px;border-radius:6px;font-size:13px;">🌱 Investors</a>
         <a href="index.html#signup" class="nav__cta">Book Free Audit →</a>
       </nav>
       <button class="nav__burger" aria-label="Toggle menu" id="burger">
@@ -109,6 +71,8 @@
       <a href="index.html#industries">Who We Serve</a>
       <a href="index.html#testimonials">Results</a>
       <a href="index.html#story">Our Story</a>
+      <a href="blog.html" style="color:#5DB82E;font-weight:600;">Blog</a>
+      <a href="investors.html" style="color:#E8BE3A;font-weight:600;">🌱 Investors & Partners</a>
       <a href="index.html#signup" class="nav__cta-mobile">Book Free Audit →</a>
     </div>
   </header>
@@ -116,7 +80,7 @@
   <!-- SITEMAP HERO -->
   <section class="sitemap-hero">
     <div class="container">
-      <span class="section__label">Navigation</span>
+      <span class="section__label section__label--light">Navigation</span>
       <h1>Sitemap</h1>
       <p>A full overview of all pages and sections on the Almond Growth website.</p>
     </div>
@@ -132,9 +96,23 @@
           <p>Core pages of the Almond Growth website</p>
           <ul>
             <li><a href="index.html">Home<span class="arrow">→</span></a></li>
+            <li><a href="blog.html">Blog<span class="arrow">→</span></a></li>
             <li><a href="sitemap.html">Sitemap<span class="arrow">→</span></a></li>
             <li><a href="privacy.html">Privacy Policy<span class="arrow">→</span></a></li>
             <li><a href="terms.html">Terms of Service<span class="arrow">→</span></a></li>
+          </ul>
+        </div>
+
+        <div class="sitemap-group sitemap-group--gold">
+          <h2>🌱 Investors & Partners</h2>
+          <p>Vision, traction, and how to partner with us</p>
+          <ul>
+            <li><a href="investors.html">Investor & Partner Overview<span class="arrow">→</span></a></li>
+            <li><a href="investors.html#opportunity">The Market Opportunity<span class="arrow">→</span></a></li>
+            <li><a href="investors.html#vision">Our Vision<span class="arrow">→</span></a></li>
+            <li><a href="investors.html#traction">Our Traction<span class="arrow">→</span></a></li>
+            <li><a href="investors.html#how-to-invest">How to Partner With Us<span class="arrow">→</span></a></li>
+            <li><a href="investors.html#connect">Contact / Express Interest<span class="arrow">→</span></a></li>
           </ul>
         </div>
 
@@ -148,6 +126,7 @@
             <li><a href="index.html#process">How It Works<span class="arrow">→</span></a></li>
             <li><a href="index.html#industries">Who We Serve<span class="arrow">→</span></a></li>
             <li><a href="index.html#testimonials">Results & Testimonials<span class="arrow">→</span></a></li>
+            <li><a href="index.html#video-testimonial">Video Testimonial<span class="arrow">→</span></a></li>
             <li><a href="index.html#story">Our Story<span class="arrow">→</span></a></li>
             <li><a href="index.html#signup">Book Free Audit<span class="arrow">→</span></a></li>
           </ul>
@@ -177,10 +156,22 @@
           </ul>
         </div>
 
+        <div class="sitemap-group">
+          <h2>📰 Blog Articles</h2>
+          <p>Insights on retention, CRM & marketing</p>
+          <ul>
+            <li><a href="blog.html">Why Small Businesses Struggle With Retention<span class="arrow">→</span></a></li>
+            <li><a href="blog.html">How CRM Systems Increase Repeat Customers<span class="arrow">→</span></a></li>
+            <li><a href="blog.html">Why Customers Don't Come Back<span class="arrow">→</span></a></li>
+            <li><a href="blog.html">How WhatsApp Marketing Helps Nigerian Businesses<span class="arrow">→</span></a></li>
+            <li><a href="blog.html">5 Funnel Mistakes Killing Small Business Sales<span class="arrow">→</span></a></li>
+          </ul>
+        </div>
+
       </div>
 
       <div class="sitemap-update">
-        <strong>Last updated:</strong> May 2026 &nbsp;|&nbsp; <strong>Website:</strong> <a href="https://www.almondgrowth.com" style="color: var(--almond);">www.almondgrowth.com</a>
+        <strong>Last updated:</strong> June 2026 &nbsp;|&nbsp; <strong>Website:</strong> <a href="https://www.almondgrowth.com">www.almondgrowth.com</a>
       </div>
     </div>
   </section>
@@ -204,8 +195,13 @@
           <a href="index.html#signup">Get Started</a>
         </div>
         <div class="footer__col">
-          <h4>Legal</h4>
+          <h4>Company</h4>
+          <a href="blog.html">Blog</a>
+          <a href="investors.html" style="color:#E8BE3A;font-weight:600;">🌱 Investors & Partners</a>
           <a href="sitemap.html">Sitemap</a>
+        </div>
+        <div class="footer__col">
+          <h4>Legal</h4>
           <a href="privacy.html">Privacy Policy</a>
           <a href="terms.html">Terms of Service</a>
         </div>
